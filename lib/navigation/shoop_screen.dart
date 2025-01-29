@@ -79,7 +79,6 @@ class _ShoopScreenState extends State<ShoopScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Avatar
                         Container(
                           width: double.infinity,
                           height: 128,
@@ -92,14 +91,10 @@ class _ShoopScreenState extends State<ShoopScreen> {
                             child: Image.network(
                               user.avatar,
                               fit: BoxFit.cover,
-                              errorBuilder: (context, error, stackTrace) {
-                                return Icon(Icons.error, size: 40, color: Colors.red);
-                              },
                             ),
                           ),
                         ),
                         SizedBox(height: 12),
-                        // Name
                         Text(
                           '${user.firstName} ${user.lastName}',
                           style: GoogleFonts.sora(
@@ -108,7 +103,6 @@ class _ShoopScreenState extends State<ShoopScreen> {
                           ),
                         ),
                         SizedBox(height: 4),
-                        // Email
                         Text(
                           user.email,
                           style: GoogleFonts.sora(
@@ -118,7 +112,6 @@ class _ShoopScreenState extends State<ShoopScreen> {
                           ),
                         ),
                         SizedBox(height: 8),
-                        // Price
                         Text(
                           'Rp 4.53',
                           style: GoogleFonts.sora(

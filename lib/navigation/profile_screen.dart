@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
-  ProfileScreen({super.key});
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +21,12 @@ class ProfileScreen extends StatelessWidget {
             height: 150,
             child: ClipOval(
               child: Image.asset(
-                'assets/p/image 2.png', // Sesuaikan path
+                'assets/p/image 2.png',
                 fit: BoxFit.cover,
               ),
             ),
           ),
           SizedBox(height: 5),
-          // Username
           Text(
             'Mobile Flutter',
             style: TextStyle(
@@ -37,7 +36,6 @@ class ProfileScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 5),
-          // Email
           Text(
             'MobileKotlin@mail.com',
             style: TextStyle(
@@ -47,31 +45,29 @@ class ProfileScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 31),
-          // Menu Items
           Expanded(
             child: Container(
-              width: double.infinity, // Lebar penuh
+              width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.white, // Set to white
+                color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(40), // Lengkungan atas kiri
-                  topRight: Radius.circular(40), // Lengkungan atas kanan
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.3), // Shadow color
-                    offset: Offset(0, 4), // Shadow position
-                    blurRadius: 10, // Shadow blur
-                    spreadRadius: 2, // Shadow spread
+                    color: Colors.black.withOpacity(0.3),
+                    offset: Offset(0, 4),
+                    blurRadius: 10,
+                    spreadRadius: 2,
                   ),
                 ],
               ),
               child: Padding(
-                padding: EdgeInsets.only(top: 44), // Jarak atas sebesar 44
+                padding: EdgeInsets.only(top: 44),
                 child: ListView(
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   children: [
-                    // Settings & Preferences Section
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 10),
                       child: Text(
@@ -133,7 +129,6 @@ class ProfileScreen extends StatelessWidget {
                       trailing: Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
                     ),
                     SizedBox(height: 35),
-                    // Support Section
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 10),
                       child: Text(
